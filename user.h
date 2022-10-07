@@ -43,3 +43,4 @@ void free(void*);
 int atoi(const char*);
 void lock(struct spinlock *);
 void unlock(struct spinlock *);
+void init_lock(struct spinlock *);
