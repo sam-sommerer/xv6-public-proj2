@@ -1,5 +1,6 @@
 struct stat;
 struct rtcdate;
+struct condvar;
 
 // system calls
 int fork(void);
@@ -23,6 +24,8 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int cv_wait(struct condvar *);
+int cv_signal(struct condvar *);
 
 // ulib.c
 int stat(const char*, struct stat*);
